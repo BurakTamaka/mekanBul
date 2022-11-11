@@ -64,7 +64,9 @@ const mekanBilgisi = function (req, res, next) {
           "yorumYapan":"Furkan",
           "puan":"2",
           "tarih":"20 Ekim 2022",
-          "yorumMetni":"Abi Rezalet"
+          "yorumMetni":{
+            "$date":"2022-10-21T11:32:11.584Z"
+          }
         }]
    }
 });
