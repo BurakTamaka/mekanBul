@@ -1,7 +1,5 @@
 var express = require("express");
 var router = express.Router();
-
-// slash gördüğün zaman function çalışır
 const anaSayfa = function (req, res, next) {
   res.render("anasayfa", {
     "baslik": "Anasayfa",
@@ -15,19 +13,15 @@ const anaSayfa = function (req, res, next) {
         "adres":"Sdü Batı Kampüsü",
         "puan":"4",
         "mesafe":"2km",
-        "imkanlar":["Kahve","Çay","Pasta"]
+        "imkanlar":["Kahve","Çay","çikolata"]
       },
       {
         "ad":"Gloria",
         "adres":"Sdü Doğu Kampüsü",
         "puan":"2",
         "mesafe":"5km",
-        "imkanlar":["Kahve","Çay","Pasta"]
-      }
-
-
-
-    ]
+        "imkanlar":["Gazoz","Tavuk döner","Poğaca"]
+      }]
   });
 };
 
@@ -51,39 +45,30 @@ const mekanBilgisi = function (req, res, next) {
           "acilis":"10:00",
           "kapanis":"22:00",
           "kapali": false
-        }
-      ],
-      "imkanlar":["Kahve","Çay","Pasta"],
+        }],
+      "imkanlar":["Kahve","Çay","çikolata"],
       "koordinatlar":{
         "enlem":"37.7",
         "boylam":"30.5"
       },
       "yorumlar":[
         {
-          "yorumYapan":"Sinan",
-          "puan":"3",
-          "tarih":"20 Ekim 2022",
-          "yorumMetni":"idare eder"
+          "yorumYapan":"Emre",
+          "puan":"8",
+          "tarih":"28 Haziran 2000",
+          "yorumMetni":"Çok güzel mekan enişte."
         },
         {
-          "yorumYapan":"burak",
+          "yorumYapan":"Furkan",
           "puan":"2",
-          "tarih":"20 Ekim 2022",
-          "yorumMetni":"hiç begenmedim"
-        }       
-      ]
-
+          "tarih":"13 Temmuz 1996",
+          "yorumMetni":"Kötü mekan kardeşim."
+        }]
    }
-
-
-
-
-
 });
 };
 
 const yorumEkle = function (req, res, next) {
   res.render("yorumekle", { title: "Yorum Sayfası" });
 };
-
 module.exports = { anaSayfa, mekanBilgisi, yorumEkle };
