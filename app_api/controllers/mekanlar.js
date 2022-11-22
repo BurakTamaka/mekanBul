@@ -66,11 +66,11 @@ const mekanEkle=function(req,res){
 const mekanGetir=function(req,res){
     if(req.params && req.params.mekanid){
         Mekan.findById(req.params.mekanid).exec(function(hata,mekan){
-            if(!mekan){
-                cevapOlustur(res,404,{"hata": "Böyle bir mekan yok"});
-            } else if(hata){
+           // if(!mekan){
+           //     cevapOlustur(res,404,{"hata": "Böyle bir mekan yok"});
+            if(hata){
                 cevapOlustur(res,404,{"hata": hata});
-            }else{
+              }else{
                 cevapOlustur(res,200,mekan);
             }
         });

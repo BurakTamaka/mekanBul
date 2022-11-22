@@ -2,7 +2,8 @@ const database = 'mekanbul';
 use(database);
 db.mekanlar.insertOne(
 {
-  "ad": "Starbucks",
+  "_id": ObjectId(),
+  "ad": "cam kafe",
   "adres": "Centrum Garden",
   "puan": 5,
   "imkanlar": [
@@ -10,7 +11,7 @@ db.mekanlar.insertOne(
     "kahve",
     "pasta"
   ],
-  "koordinatlar": [
+  "koordinat": [
     37.83226584629666,
     30.524732239878013
   ],
