@@ -1,13 +1,9 @@
 const database = 'mekanbul';
 use(database);
 db.mekanlar.insertOne(
-{
+{ 
   "_id": ObjectId(),
-<<<<<<< HEAD
-  "ad": "cam kafe",
-=======
   "ad": "Starbucks",
->>>>>>> e217b9193b1d815d55eaf610598447502e3bf7b5
   "adres": "Centrum Garden",
   "puan": 5,
   "imkanlar": [

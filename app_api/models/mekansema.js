@@ -1,32 +1,28 @@
-var mongoose=require("mongoose");
+var mongoose = require('mongoose');
 
-var yorumSema=new mongoose.Schema({
-    yorumYapan:{type:String, required:true},
-    yorumMetni:{type:String, required:true},
-    puan:{type:Number,default:0,min:0,max:5},
-    tarih:{type:Date, default:Date.now}
-});
-var saatSema=new mongoose.Schema({
-    gunler:{type:String, required:true},
-    acilis:String,
-    kapanis:String,
-<<<<<<< HEAD
-    kapali:{type:Boolean}
-=======
-    kapali: Boolean
->>>>>>> e217b9193b1d815d55eaf610598447502e3bf7b5
+var saatSema = new mongoose.Schema({
+    gunler : {type : [String] , required : true},
+    acilis : String , 
+    kapanis : String ,
+    kapali : {type : Boolean}
 });
 
-var mekanSema=new mongoose.Schema({
-   
-    ad:{type:String,required:true},
-    adres:{type:String,required:true},
-    puan:{type:Number,default:0,min:0,max:5},
-    imkanlar:[String],
-    koordinatlar:{type:[Number],index:"2dsphere"},
-    saatler:[saatSema],
-    yorumlar:[yorumSema]
-
+var yorumSema = new mongoose.Schema({
+    yorumYapan : {type : String , required : true},
+    puan : {type : Number , default : 0 , min : 0 , max : 5},
+    yorumMetni : {type : String , required : true},
+    tarih : {type : Date , default : Date.now}
 });
 
-mongoose.model("mekan",mekanSema,"mekanlar");
+var mekanSema = new mongoose.Schema({
+
+   ad : {type : String , required : true},
+   adres : String,
+   puan : {type: Number , default :0 , min : 0 , max : 5},
+   imkanlar : [String],
+   koordinat  : {type : [Number] , index : '2dsphere'},
+   saatler : [saatSema],
+   yorumlar : [yorumSema]
+});
+
+mongoose.model('mekan' , mekanSema , 'mekanlar');

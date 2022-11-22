@@ -24,7 +24,6 @@ const anaSayfa = function (req, res, next) {
       }]
   });
 };
-
 const mekanBilgisi = function (req, res, next) {
   res.render("mekanbilgisi",
   { "baslik": "Mekan Bilgisi",
@@ -53,30 +52,18 @@ const mekanBilgisi = function (req, res, next) {
       },
       "yorumlar":[
         {
-<<<<<<< HEAD
           "yorumYapan":"Burak",
-          "puan":"1",
+          "puan":"2",
           "tarih":"20 Ekim 2022",
-          "yorumMetni":"rezilllll"
+          "yorumMetni":"kotu"
         },
         {
           "yorumYapan":"Furkan",
           "puan":"4",
           "tarih":"20 Ekim 2022",
-          "yorumMetni":"gayet iyi"
-=======
-          "yorumYapan":"Emre",
-          "puan":"8",
-          "tarih":"28 Haziran 2000",
-          "yorumMetni":"Çok güzel mekan enişte."
+          "yorumMetni":"gayet iyi",
         },
-        {
-          "yorumYapan":"Furkan",
-          "puan":"2",
-          "tarih":"13 Temmuz 1996",
-          "yorumMetni":"Kötü mekan kardeşim."
->>>>>>> e217b9193b1d815d55eaf610598447502e3bf7b5
-        }]
+        ]
    }
 });
 };
