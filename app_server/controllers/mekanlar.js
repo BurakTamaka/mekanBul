@@ -25,8 +25,6 @@ const anaSayfa = function (req, res, next) {
           "imkanlar":["Hamburger","Pizza"]
       }
     ]
-    
-
   });
 }
 
@@ -60,21 +58,25 @@ const mekanBilgisi = function (req, res,) {
     "yorumlar":[
       {
         "yorumYapan":"burak",
-        "puan":"5",
+        "yorumMetni":"Kahveler harika",
         "tarih":"20 Ekim 2022",
-        "yorumMetni":"Kahveler harika"
+        "puan":"5"        
+      },
+      {
+        "yorumYapan":"furkan",
+        "yorumMetni":"tavsiye etmem",
+        "tarih":"20 Ekim 2022",
+        "puan":"2"   
       }
-    ]
-    
-
-    
+    ]    
   }
-
 });
 }
+
 const yorumEkle = function (req, res, next) {
-  res.render('yorumekle', { title: 'Yorum Sayfası' });
+  res.render('yorumekle', { title: 'Yorum Ekle' });
 }
+
 module.exports = {
   anaSayfa,
   mekanBilgisi,
