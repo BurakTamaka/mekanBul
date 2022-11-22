@@ -10,7 +10,11 @@ var saatSema=new mongoose.Schema({
     gunler:{type:String, required:true},
     acilis:String,
     kapanis:String,
+<<<<<<< HEAD
     kapali:{type:Boolean}
+=======
+    kapali: Boolean
+>>>>>>> e217b9193b1d815d55eaf610598447502e3bf7b5
 });
 
 var mekanSema=new mongoose.Schema({

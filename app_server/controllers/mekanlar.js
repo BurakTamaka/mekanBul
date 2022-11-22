@@ -53,6 +53,7 @@ const mekanBilgisi = function (req, res, next) {
       },
       "yorumlar":[
         {
+<<<<<<< HEAD
           "yorumYapan":"Burak",
           "puan":"1",
           "tarih":"20 Ekim 2022",
@@ -63,6 +64,18 @@ const mekanBilgisi = function (req, res, next) {
           "puan":"4",
           "tarih":"20 Ekim 2022",
           "yorumMetni":"gayet iyi"
+=======
+          "yorumYapan":"Emre",
+          "puan":"8",
+          "tarih":"28 Haziran 2000",
+          "yorumMetni":"Çok güzel mekan enişte."
+        },
+        {
+          "yorumYapan":"Furkan",
+          "puan":"2",
+          "tarih":"13 Temmuz 1996",
+          "yorumMetni":"Kötü mekan kardeşim."
+>>>>>>> e217b9193b1d815d55eaf610598447502e3bf7b5
         }]
    }
 });
