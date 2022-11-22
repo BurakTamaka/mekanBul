@@ -2,28 +2,25 @@ doctype html
 html
   head
     meta(name='viewport',content='width=device-width,initial-scale=1.0')
-    title #{baslik}
+    title= baslik
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
   body
     .navbar-default.navbar.navbar-fixed-top
       .container 
-        .navbar-header
-          a.navbar-brand(href="/") MekanBul
-          button.navbar-toggle(type="button",data-toggle="collapse",data-target="#navbar-main")
+        .navbar-header 
+          a.navbar-brand(href='/' ) MekanBul
+          button.navbar-toggle(type='button',data-toggle='collapse',
+          data-target='#navbar-main')
             span.icon-bar
             span.icon-bar
             span.icon-bar
         #navbar-main.navbar-collapse.collapse 
           ul.nav.navbar-nav 
             li 
-              a(href="/hakkinda") Hakkında 
-  .container
-    block content
+              a(href='/hakkinda') Hakkında            
+  .container 
+    block content 
     footer 
-<<<<<<< HEAD
-      small &copy; Muhammed Burak Tamaka 2022
-=======
-      small &copy; Ahmet Hakan Yaldız 2022
->>>>>>> e217b9193b1d815d55eaf610598447502e3bf7b5
-  script(src='/javascripts/jquery-3.6.1.min.js')
-  script(src='/bootstrap/js/bootstrap.min.js')
+      small &copy; Muhammed Burak Tamaka  2022      
+  script(src='/javascripts/jquery-3.6.1.min.js')  
+  script(src='/bootstrap/js/bootstrap.min.js') 

@@ -1,8 +1,8 @@
 const database = 'mekanbul';
 use(database);
 db.mekanlar.insertOne(
-{ 
-  "_id": ObjectId(),
+{
+  //"_id": ObjectId(),
   "ad": "Starbucks",
   "adres": "Centrum Garden",
   "puan": 5,
