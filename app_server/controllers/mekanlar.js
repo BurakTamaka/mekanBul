@@ -1,84 +1,85 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-const anaSayfa = function (req, res, next) {
-  res.render('anasayfa',
-   { "baslik": "Ana sayfa",
-      "sayfaBaslik":{
-      "site":"MekanBul",
-      "slogan":"Civardaki Mekanları Keşfet!"
+const anaSayfa = function (req, res) {
+  res.render("anasayfa", {
+    "baslik": "Ana Sayfa",
+    "sayfaBaslik": {
+      "siteAd": "MekanBul",
+      "slogan": "Civardaki Mekanları Keşfet!",
     },
-    "mekanlar":[
+    "mekanlar": [
       {
-          "ad":"Starbucks",
-          "adres":"Centrum Garden",
-          "puan":"4",
-          "mesafe":"6km",
-          "imkanlar":["çay","kahve","pasta"]
+        "ad": "Starbucks",
+        "adres": "Centrum Garden",
+        "puan": "4",
+        "imkanlar": ["Dünya Kahveleri","soguk içecekler" ,"Yiyecek" ],
+        "mesafe": "100m",
       },
-      
       {
-          "ad":"cam kafe",
-          "adres":"İyaşpark Avm",
-          "puan":"4",
-          "mesafe":"2km",
-          "imkanlar":["Hamburger","Pizza"]
-      }
-    ]
+        "ad": "Gloria Jeans",
+        "adres": "Sdü Doğu Kampüsü",
+        "puan": "3",
+        "imkanlar": ["Kahve", "Çay", "Pasta"],
+        "mesafe": "5km",
+      },
+    ],
   });
-}
+};
 
-const mekanBilgisi = function (req, res,) {
-  res.render('mekanbilgisi',
-  { "baslik": 'Mekan Bİlgisi',
-  "mekanBaslik":"Starbucks",
-  "mekanDetay":{
-    "ad":"Starbucks",
-    "adres":"Centrum Garden",
-    "puan":"4",
-    "saatler":[
-      {
-      "gunler":"Pazartesi-Cuma",
-      "acilis":"09.00",
-      "kapanis":"23.00",
-      "kapali": false
-  },
-    {"gunler":"Pazartesi-Cuma",
-    "acilis":"09.00",
-    "kapanis":"23.00",
-    "kapali": false
-
-  }
-],
-    "imkanlar":["çay","kahve","pasta"],
-    "koordinatlar":{
-      "enlem":"37.7",
-      "boylam":"30.5"
-    },
-    "yorumlar":[
-      {
-        "yorumYapan":"burak",
-        "yorumMetni":"Kahveler harika",
-        "tarih":"20 Ekim 2022",
-        "puan":"5"        
-      },
-      {
-        "yorumYapan":"furkan",
-        "yorumMetni":"tavsiye etmem",
-        "tarih":"20 Ekim 2022",
-        "puan":"2"   
-      }
-    ]    
-  }
-});
-}
+const mekanBilgisi = function (req, res) {
+  res.render("mekanbilgisi", 
+  { 
+    "baslik": "Mekan Bilgisi",
+    "mekanBaslik": "Starbucks",
+    "mekanDetay": {
+        "ad": "Starbucks",
+        "adres": "Centrum Garden AVM",
+        "puan": "4",
+        "imkanlar": ["Dünya Kahveleri", "Kekler", "Pastalar"],
+        "koordinatlar": {
+            "enlem": "37.7",
+            "boylam": "30.5"
+        },
+        "saatler": [
+            {
+                "gunler": "Pazartesi-Cuma",
+                "acilis": "9:00",
+                "kapanis": "23:00",
+                "kapali": false
+            },
+            {
+                "gunler": "Cumartesi-Pazar",
+                "acilis": "10:00",
+                "kapanis": "22:00",
+                "kapali": false
+            }
+        ],
+        "yorumlar": [
+            {
+                "yorumYapan": "Burak",
+                "puan": "2",
+                "tarih": "20 Ekim 2022",
+                "yorumMetni": "Begenmedim"
+            },
+            {
+              "yorumYapan": "Furkan",
+              "puan": "4",
+              "tarih": "20 Ekim 2022",
+              "yorumMetni": "Gayet iyi"
+          }
+        ]
+    }
+  
+ });
+};
 
 const yorumEkle = function (req, res, next) {
-  res.render('yorumekle', { title: 'Yorum Ekle' });
-}
+  res.render("yorumekle", { title: "Yorum Ekle" });
+};
 
 module.exports = {
   anaSayfa,
   mekanBilgisi,
-  yorumEkle
-}
+  yorumEkle,
+};
