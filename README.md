@@ -1,4 +1,4 @@
-[Yakındaki Mekanları Listele - Replit Linki](https://mekanbul.buraktamaka.repl.co?enlem=37&boylam=35)
+[Yakındaki Mekanları Listele - Replit Linki](https://mekanbul.buraktamaka.repl.co/?enlem=37&boylam=35)
 
 # MekanBul REST API Adresleri
 [1. Api Test]
